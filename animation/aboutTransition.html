@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>关于transition</title>
+	<style type="text/css" media="screen">
+		body {
+			font: 10pt Arial, sans-serif;
+			color: #555;
+		}
+		#container1 {
+			width: 100px;
+			height: 100px;
+			background: aquamarine;
+			transition: width 2s;
+		}
+
+		#container1:hover {
+			width: 200px;
+		}
+
+		#container2 {
+			border-radius: 50px;
+			width: 100px;
+			height: 100px;
+			background: aquamarine;
+			transition: width 2s,height 2s,background 5s, border-radius 2s;
+		}
+
+		#container2:hover {
+			background: brown;
+			border-radius: 100px;
+			width: 200px;
+			height: 200px;
+		}
+
+		#container3 {
+			width: 100px;
+			height: 100px;
+			background: aquamarine;
+			transition-property: background;
+			transition-duration: 2s;
+			transition-delay: 1s;
+		}
+
+		#container3:hover {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+
+		#container4 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: width 2s;
+			transition-timing-function: ease-in; /* ease,linear,ease-in,ease-out,ease-in-out */
+		}
+		#container4:hover {
+			width: 300px;
+		}
+
+		#container5 {
+			width: 200px;
+			height: 200px;
+			background: #92b901;
+			font-weight: bold;
+			font-size:15px;
+			padding: 10px;
+			transition:transform 1s, opacity 1s, background 1s, width 1s, height 1s, font-size 1s;
+
+			border-radius: 10px;
+			opacity: 0.6;
+		}
+
+		#container5:hover {
+			transform:rotate(360deg);
+			opacity: 1;
+			background: red;
+			width: 80px;
+			height: 80px;
+			font-size: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<p>单个属性transiton</p>
+	<div id="container1">
+		container1
+	</div>
+	<p>多个属性transition</p>
+	<div id="container2">
+		container2
+	</div>
+	<p>过渡效果的延迟</p>
+	<div id="container3">
+		container3
+	</div>
+	<p>改变速率变化</p>
+	<div id="container4" class="all ease-in">
+		container4
+	</div>
+	<p>实现简单的文字和背景缩放</p>
+	<div id="container5">
+		container5
+	</div>
+</body>
+</html>
