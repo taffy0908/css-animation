@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>perspective和backface-visibility</title>
+	<style type="text/css">
+		body {
+		  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+		  margin: 12px 0;
+		}
+		.card-container {
+		  cursor: pointer;
+		  height: 150px;
+		  perspective: 600;
+		  position: relative;
+		  width: 150px;
+		}
+		.card {
+		  height: 100%;
+		  position: absolute;
+		  transform-style: preserve-3d;
+		  transition: all 1s ease-in-out;
+		  width: 100%;
+		}
+		.card:hover {
+		  transform: rotateY(180deg);
+		}
+		.card .side {
+		  backface-visibility: hidden;
+		  border-radius: 6px;
+		  height: 100%;
+		  position: absolute;
+		  overflow: hidden;
+		  width: 100%;
+		}
+		.card .back {
+		  background: #eaeaed;
+		  color: #0087cc;
+		  line-height: 150px;
+		  text-align: center;
+		  transform: rotateY(180deg);
+		}
+
+	</style>
+</head>
+<body>
+	<p>perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。
+		当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
+		注释：perspective 属性只影响 3D 转换元素。</p>
+	<div class="card-container">
+	  <div class="card">
+	    <div class="side"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/jimmy.jpg" alt="Jimmy Eat World"></div>
+	    <div class="side back">Jimmy Eat World</div>
+	  </div>
+	</div>
+	
+</body>
+</html>
