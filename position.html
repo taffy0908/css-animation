@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		learn position
+	</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style type="text/css">
+		body{
+			font-size: 1em;
+		}
+		p {
+			margin: 10px auto;
+		}
+		.wrap{
+			position: relative;
+			top: 10px;
+			left: 10px;
+			border: 1px solid red;
+		}
+		.wrap h1 {
+			padding: 100px;
+		}
+
+		.absolute {
+			top: 0;
+			left: 0;
+			position: absolute;
+			background: white;
+			border: 1px solid pink;
+		}
+		.static {
+			position: static;
+			background: red;
+			height: 100px;
+			text-align: center;
+		}
+
+		.relative {
+			position: relative;
+			color: blue;
+			top: -100px;
+		}
+
+		.fixed {
+			position: fixed;
+			bottom: 100;
+			left: 0;
+			background: cyan;
+			height: 100px;
+			width: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<p>position取值：static relative absolute fixed</p>
+
+	<div class="wrap">
+		<h1>我是相对定位的，我的边框是红色的，很大一片哈</h1>
+		<div class="absolute">
+			我是绝对定位的，我的位置是相对于离我最近已经定位了的父元素而言的 <br>
+			现在离我最近的已经定位了的父元素的红边框的那个家伙，我的top和left都是0 <br>
+			所以我就在这儿咯
+		</div>
+		<div>我就是来掺和的</div>
+		<div>我就是来掺和的</div>
+		<div>我就是来掺和的</div>
+		<div>我就是来掺和的</div>
+		<div class="static">
+			我是静态定位的 <br>
+			我的高度是50px <br>
+			那个字体蓝色的相对定位的家伙在我的下面
+		</div>
+
+		<div class="relative">
+			我是相对定位的<br>
+			我本来是在上面那个静态的红家伙下面<br>
+			可是我设置了top为-50px
+		</div>
+		<div class="fixed">
+			我是固定定位的
+		</div>
+	</div>
+	
+</body>
+</html>
