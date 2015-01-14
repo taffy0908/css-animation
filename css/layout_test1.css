@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.header {
+	background-color: red;
+}
+
+.main {
+	
+	
+}
+
+.content {
+	width: 60%;
+	display: inline-block;
+	background-color: pink;
+	float: left;
+}
+
+.right_side {
+	background-color: orange;
+	float: right;
+	width: 40%;
+	display: inline-block;
+}
+
+.footer {
+	background-color: black;
+	clear: both;
+}
